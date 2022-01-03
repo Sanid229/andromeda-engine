@@ -282,6 +282,25 @@ class Character extends FlxSprite
 				flipX = !flipX;
 
 				leftToRight();
+		        curCharacter='fred';
+			iconColor = 0xFFAF66CE;
+			frames = Paths.characterSparrow('characters/Fred');
+			animation.addByPrefix('idle', 'Dad idle dance', 24);
+			animation.addByPrefix('singUP', 'Dad Sing note UP', 24);
+			animation.addByPrefix('singLEFT', 'dad sing note right', 24);
+			animation.addByPrefix('singDOWN', 'Dad Sing Note DOWN', 24);
+			animation.addByPrefix('singRIGHT', 'Dad Sing Note LEFT', 24);
+
+			addOffset("idle",0,0);
+			addOffset("singUP",-6,50);
+			addOffset("singRIGHT",0,27);
+			addOffset("singLEFT",-10,10);
+			addOffset("singDOWN",0,-30);
+
+			if(isPlayer){
+				flipX = !flipX;
+				
+				leftToRight();
 			}
 		}
 	}
